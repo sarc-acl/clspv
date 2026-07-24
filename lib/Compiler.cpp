@@ -1547,3 +1547,10 @@ ClspvError clspvCompileFromSourcesString(
 
   return CLSPV_SUCCESS;
 }
+
+void clspvFreeOutputBuildObjs(char *output_binary, char *output_log) {
+  free(output_binary);
+  output_binary = NULL;
+  free(output_log);
+  output_log = NULL;
+}
